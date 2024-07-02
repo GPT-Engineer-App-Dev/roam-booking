@@ -15,7 +15,7 @@ const Index = () => {
 
   return (
     <div className="space-y-8">
-      <HeroSection />
+      <HeroSection search={search} setSearch={setSearch} handleSearch={handleSearch} />
       <FeaturedDestinations />
       <HowItWorks />
       <Testimonials />
@@ -23,7 +23,7 @@ const Index = () => {
   );
 };
 
-const HeroSection = () => (
+const HeroSection = ({ search, setSearch, handleSearch }) => (
   <section className="relative h-[500px] bg-gray-200">
     <Carousel>
       <Carousel.Item>
